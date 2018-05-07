@@ -49,7 +49,4 @@ public class TableroJuego {
 		// TODO pido al modo de juego que evalue si sigo jugando segun lo que acabo de voltear
 	}
 
-	public static TableroJuego crearTablero(ModoDeJuegoSupervivencia modoDeJuego, Tablero tablero) {
-		return new TableroJuego( modoDeJuego, tablero);
-	}
 }
