@@ -1,3 +1,9 @@
+import ar.edu.ub.testing.buscaminas.modelo.Juego;
+import ar.edu.ub.testing.buscaminas.modelo.Jugador;
+import ar.edu.ub.testing.buscaminas.mododejuego.ModoDeJuegoSupervivencia;
+import ar.edu.ub.testing.buscaminas.tablero.Tablero;
+import ar.edu.ub.testing.buscaminas.tablero.TableroJuego;
+import ar.edu.ub.testing.util.Consola;
 
 public class Aplicacion {
 	public static void main(String[] args) {
@@ -30,5 +36,22 @@ public class Aplicacion {
 		// TODO MenuJugarPartidaCarrera		
 		// TODO MenuJugarPartidaConquista
 		
+		///////////////////////////////////////////////////////////////////////
+		// Ejemplo de una partida en supervivencia con un solo jugador
+		
+		// TODO pedir la consola
+		// TODO pedir archivo con el template del tablero
+		Consola      consola = null;		
+		Tablero      templateTablero = new Tablero();
+		TableroJuego tablero = TableroJuego.crearTablero( new ModoDeJuegoSupervivencia(), templateTablero  );
+		Jugador[]    jugadores = new Jugador[] { new Jugador( "Jugador 1") };
+		
+		// Creo una partida
+		Juego juego = new Juego( consola, jugadores , tablero);
+		
+		// Mando a jugar
+		juego.jugar();
+		
+		// TODO pedir el resultado(seguramente vaya a otra clase para analizar)
 	}
 }
