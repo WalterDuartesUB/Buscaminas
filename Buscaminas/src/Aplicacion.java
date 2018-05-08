@@ -6,6 +6,7 @@ import ar.edu.ub.testing.buscaminas.tablero.CreadorTablero;
 import ar.edu.ub.testing.buscaminas.tablero.Tablero;
 import ar.edu.ub.testing.buscaminas.tablero.TableroJuego;
 import ar.edu.ub.testing.consola.Consola;
+import ar.edu.ub.testing.consola.ConsolaTeclado;
 
 public class Aplicacion {
 	public static void main(String[] args) {
@@ -44,7 +45,7 @@ public class Aplicacion {
 		// TODO pedir la consola
 		// TODO pedir archivo con el template del tablero
 		
-		Consola        consola = null;		
+		Consola        consola = ConsolaTeclado.getConsola();		
 		Tablero        templateTablero = new Tablero();
 		CreadorTablero creadorTablero = new CreadorTablero();
 		TableroJuego   tablero = creadorTablero.crearTablero( new ModoDeJuegoSupervivencia(), templateTablero, Dificultad.UN_JUGADOR_FACIL  );

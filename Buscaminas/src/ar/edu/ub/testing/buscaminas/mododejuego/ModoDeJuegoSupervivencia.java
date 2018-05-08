@@ -1,19 +1,19 @@
 package ar.edu.ub.testing.buscaminas.mododejuego;
 
+import ar.edu.ub.testing.buscaminas.celda.Bomba;
 import ar.edu.ub.testing.buscaminas.modelo.ModoDeJuego;
 
-public class ModoDeJuegoSupervivencia extends ModoDeJuego{
-
-	@Override
-	public boolean terminoJuego() {
-		// TODO Auto-generated method stub
-		return false;
+public class ModoDeJuegoSupervivencia extends ModoDeJuego {
+	
+	public ModoDeJuegoSupervivencia() {
+		super();
 	}
-
+	
 	@Override
-	public boolean tengoQueCambiarDeTurno() {
-		// TODO Auto-generated method stub
-		return false;
+	public void actualizarEstadoJuego(Bomba bomba) {
+		// Pise una bomba, tengo que terminar el turno y el juego
+		this.setTerminoJuego( true );
+		this.setTerminoTurno( true );
 	}
 
 }

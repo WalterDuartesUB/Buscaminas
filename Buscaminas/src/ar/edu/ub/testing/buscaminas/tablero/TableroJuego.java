@@ -1,16 +1,20 @@
 package ar.edu.ub.testing.buscaminas.tablero;
 
+import ar.edu.ub.testing.buscaminas.celda.Celda;
 import ar.edu.ub.testing.buscaminas.modelo.Coordenadas;
 import ar.edu.ub.testing.buscaminas.modelo.ModoDeJuego;
 import ar.edu.ub.testing.consola.Consola;
 
 public class TableroJuego {
 	private ModoDeJuego modoDeJuego;
-	private Tablero tablero;
+	private Tablero     tablero;
 		
 	public TableroJuego(ModoDeJuego modoDeJuego, Tablero tablero) {
 		this.setModoDeJuego(modoDeJuego);
-		this.setTablero(tablero);		
+		this.setTablero(tablero);	
+		
+		// TODO Segun la dificultad del modo de juego, hay que distribuir las bombas
+		// TODO Esto capaz convenga que este afuera en el constructor estatico y hacer este protegido
 	}
 
 	public ModoDeJuego getModoDeJuego() {
@@ -38,14 +42,21 @@ public class TableroJuego {
 	}
 
 	public void mostrar(Consola consola) {
-		// TODO Auto-generated method stub
+		// TODO Imprimir el tablero como coresponda
 		
 	}
 
 	public void voltear(Coordenadas coordenadas) {
-		// TODO Volteo la coordenada
+		// TODO implementar el cambio de estado de la celda en las coordenadas		
+		this.getCelda( coordenadas ).voltear();
 		
-		// TODO pido al modo de juego que evalue si sigo jugando segun lo que acabo de voltear
+		// Actualizo el estado de juego para saber si perdi o si tengo que cambiar el turno
+		this.getCelda( coordenadas ).actualizarEstadoJuego( this.getModoDeJuego() );		
+	}
+
+	private Celda getCelda(Coordenadas coordenadas) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
