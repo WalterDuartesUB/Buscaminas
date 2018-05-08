@@ -1,5 +1,8 @@
 package ar.edu.ub.testing.buscaminas.celda;
 
-public class Contenido {
-	// TODO esto seguramente se convierta en un enum
+import ar.edu.ub.testing.buscaminas.modelo.ModoDeJuego;
+
+public abstract class Contenido {
+	public abstract void actualizarEstadoJuego(ModoDeJuego modoDeJuego);	
+	
 }

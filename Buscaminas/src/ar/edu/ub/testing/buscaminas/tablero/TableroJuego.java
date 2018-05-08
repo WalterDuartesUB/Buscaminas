@@ -1,5 +1,6 @@
 package ar.edu.ub.testing.buscaminas.tablero;
 
+import ar.edu.ub.testing.buscaminas.celda.ContenidoBomba;
 import ar.edu.ub.testing.buscaminas.celda.Celda;
 import ar.edu.ub.testing.buscaminas.modelo.Coordenadas;
 import ar.edu.ub.testing.buscaminas.modelo.ModoDeJuego;
@@ -7,11 +8,11 @@ import ar.edu.ub.testing.consola.Consola;
 
 public class TableroJuego {
 	private ModoDeJuego modoDeJuego;
-	private Tablero     tablero;
+	private Tablero		tablero;
 		
-	public TableroJuego(ModoDeJuego modoDeJuego, Tablero tablero) {
+	public TableroJuego(ModoDeJuego modoDeJuego, TableroTemplate tablero) {
 		this.setModoDeJuego(modoDeJuego);
-		this.setTablero(tablero);	
+		this.setTablero( new Tablero() );	
 		
 		// TODO Segun la dificultad del modo de juego, hay que distribuir las bombas
 		// TODO Esto capaz convenga que este afuera en el constructor estatico y hacer este protegido
@@ -55,8 +56,8 @@ public class TableroJuego {
 	}
 
 	private Celda getCelda(Coordenadas coordenadas) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO Pedir lo que corresponda a la celda en el tablero
+		return new Celda( new ContenidoBomba() );
 	}
 
 }

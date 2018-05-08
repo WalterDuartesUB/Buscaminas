@@ -1,6 +1,6 @@
 package ar.edu.ub.testing.buscaminas.modelo;
 
-import ar.edu.ub.testing.buscaminas.celda.Bomba;
+import ar.edu.ub.testing.buscaminas.celda.ContenidoBomba;
 
 public abstract class ModoDeJuego {
 	private boolean terminoJuego;
@@ -12,7 +12,7 @@ public abstract class ModoDeJuego {
 	}
 		
 	//Cada modo de juego tiene que actualizar su estado basado en lo que reciba
-	public abstract void actualizarEstadoJuego(Bomba bomba);
+	public abstract void actualizarEstadoJuego(ContenidoBomba bomba);
 	
 	public boolean terminoJuego() {
 		return terminoJuego;

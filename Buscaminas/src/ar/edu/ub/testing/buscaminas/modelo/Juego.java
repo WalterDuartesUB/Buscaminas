@@ -62,6 +62,9 @@ public class Juego {
 		// TODO Mientras que las coordenadas no son validas, pido nuevas
 		this.mostrarTablero();
 		
+		this.getConsola().print("Ingrese las coordenadas a voltear");
+		this.getConsola().nextLine();
+		
 		return coordenadas;
 	}
 
