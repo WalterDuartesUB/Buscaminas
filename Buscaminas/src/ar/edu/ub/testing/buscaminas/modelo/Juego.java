@@ -52,7 +52,7 @@ public class Juego {
 		Coordenadas coordenadas = this.pedirCoordenadas();
 		
 		// TODO muestro la celda
-		this.getTablero().voltear( coordenadas );
+		this.getTablero().voltear( coordenadas, this.getJugadorDeTurno() );
 	}
 
 	private Coordenadas pedirCoordenadas() {

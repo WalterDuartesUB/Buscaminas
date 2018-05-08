@@ -11,9 +11,12 @@ public class ModoDeJuegoSupervivencia extends ModoDeJuego {
 	
 	@Override
 	public void actualizarEstadoJuego(ContenidoBomba bomba) {
-		// Pise una bomba, tengo que terminar el turno y el juego
-		this.setTerminoJuego( true );
+		// Pise una bomba, termina mi turno		
 		this.setTerminoTurno( true );
+		
+		// TODO el juego solo termina si se mueren todos los jugadores o no hay mas minas
+		// TODO ver como resolver eso.		
+		this.setTerminoJuego( true );
 	}
 
 }
