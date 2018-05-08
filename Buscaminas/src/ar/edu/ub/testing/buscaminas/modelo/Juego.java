@@ -1,7 +1,7 @@
 package ar.edu.ub.testing.buscaminas.modelo;
 
 import ar.edu.ub.testing.buscaminas.tablero.TableroJuego;
-import ar.edu.ub.testing.util.Consola;
+import ar.edu.ub.testing.consola.Consola;
 
 public class Juego {
 	

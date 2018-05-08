@@ -2,8 +2,7 @@ package ar.edu.ub.testing.buscaminas.tablero;
 
 import ar.edu.ub.testing.buscaminas.modelo.Coordenadas;
 import ar.edu.ub.testing.buscaminas.modelo.ModoDeJuego;
-import ar.edu.ub.testing.buscaminas.mododejuego.ModoDeJuegoSupervivencia;
-import ar.edu.ub.testing.util.Consola;
+import ar.edu.ub.testing.consola.Consola;
 
 public class TableroJuego {
 	private ModoDeJuego modoDeJuego;

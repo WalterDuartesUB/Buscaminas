@@ -5,7 +5,7 @@ import ar.edu.ub.testing.buscaminas.mododejuego.ModoDeJuegoSupervivencia;
 import ar.edu.ub.testing.buscaminas.tablero.CreadorTablero;
 import ar.edu.ub.testing.buscaminas.tablero.Tablero;
 import ar.edu.ub.testing.buscaminas.tablero.TableroJuego;
-import ar.edu.ub.testing.util.Consola;
+import ar.edu.ub.testing.consola.Consola;
 
 public class Aplicacion {
 	public static void main(String[] args) {
