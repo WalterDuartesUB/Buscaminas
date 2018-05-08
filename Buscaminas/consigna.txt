@@ -1,0 +1,69 @@
+El software deberá tener las siguientes características:
+
+- Un menú principal donde se podrá optar entre los modos de un solo jugador, multijugador local, ver récords o salir de la aplicación.
+
+---------------------------------------------------------------------------------------------
+
+- Los mapas se cargarán desde archivo, siendo posible para el usuario crear los propios. 
+Las restricciones que aplican para determinar si un mapa es válido son: 
+(a) La cantidad de casilleros no puede ser inferior a 64; 
+(b) El ancho del mapa no puede superar 100% del alto y viceversa; 
+(c) Todos los casilleros deben estar en contacto con al menos un casillero.
+
+- Debe tomarse el tiempo de la partida y llevar un registro de la mejor marca por cada mapa y dificultad, visibles accediendo al menú de récords.
+
+---------------------------------------------------------------------------------------------
+- SinglePlayer
+------------
+
+- En el modo de un solo jugador se podrá elegir el mapa y la dificultad.
+
+- Las dificultades pueden ser fácil, medio y difícil; en fácil, 
+el porcentaje de minas responderá al 15% de la cantidad de casillas del mapa; 
+en dificultad media, el 20%; 
+y en dificultad máxima, el 30%.
+
+- Para el modo de un solo jugador, la condición de victoria es haber descubierto todos los casilleros que no contienen minas.
+
+---------------------------------------------------------------------------------------------
+
+- En cuanto al multijugador, habrá 3 modos de juego: supervivencia, conquista y carrera.
+
+- Al crear una partida multijugador, se elegirá el modo de juego y la cantidad de participantes con sus nombres; en base al modo de juego se podrá elegir el mapa.
+
+---------------------------------------------------------------------------------------------
+
+- Supervivencia: 
+----------------
+Se puede jugar de 2 a 8 personas. 
+Pueden elegirse los diversos mapas disponibles para el modo de un jugador (en caso de que algún jugador no lo tenga, se le debe enviar) con el 20% de minas. 
+El juego consiste en, por turnos, revelar el contenido de un casillero. 
+El jugador que dé con una mina será eliminado de la partida, y ganará el último en pie. 
+En caso de resolverse todo el tablero y haber dos o más jugadores en pie, resultará ganador aquel que haya descubierto más casilleros (quien revele un casillero vacío hará que todos los vacíos a su alrededor de revelen). 
+De mantenerse el empate, se declarará como tal.
+
+---------------------------------------------------------------------------------------------
+
+- Conquista: 
+------------
+Se puede jugar de 2 a 4 personas. 
+Al igual que en supervivencia, pueden elegirse los mismos mapas que en el modo de un jugador con el 20% de minas. 
+El juego consiste en, por turnos, revelar el contenido de un casillero y, de haber una mina en él, podrá revelarse un nuevo casillero en el mismo turno. 
+La partida finalizará cuando no queden minas por ser descubiertas o cuando un ningún jugador pueda superar la cantidad de minas descubiertas por quien ostenta el primer puesto.
+Es posible empatar este juego.
+
+---------------------------------------------------------------------------------------------
+
+- Carrera: 
+----------
+Se puede jugar sólo de a 4 personas. 
+No será posible elegir entre los mapas del modo de un jugador, sino que serán mapas cuadrados de 15x15 con 20% de minas para partidas cortas o de 21x21 con 25% de minas para partidas largas. 
+Cada jugador tendrá un casillo descubierto en la mitad de un borde de la grilla, y a partir de él deberá intentar llegar al borde opuesto. 
+Para eso, se tomarán turnos para revelar casilleros contiguos y, en caso de no haber una mina en el casillero descubierto, podrá seguir revelando hasta llegar al destino o encontrar una mina. 
+El primer jugador en llegar al borde opuesto ganará la partida. 
+Cuando los caminos de dos jugadores se crucen, el jugador de turno actual podrá “cortar” el camino del jugador que espera su turno. 
+Al hacer esto, todos los casilleros que haya descubierto la víctima hasta el casillero de corte serán ocultos.
+
+---------------------------------------------------------------------------------------------
+
+- En todos los casos, al finalizar la partida se informará el ganador y se volverá automáticamente al menú principal.
